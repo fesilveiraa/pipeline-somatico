@@ -40,9 +40,9 @@ chr9	5073770	G	T
 **3. Enviar job para Cancer Genome Interpreter (CGI) API**
 > fonte: https://www.cancergenomeinterpreter.org/rest_api
 
-Após filtrar apenas as colunas de interesse (CHR, POS, REF e ALT), agora podemos enviar via REST-API as variantes somaticas da amostra WP048.
+Após filtrar apenas as colunas de interesse (CHR, POS, REF e ALT), agora podemos enviar via REST-API as variantes somáticas da amostra WP048.
 
->Nota: altere a variavel {SEU_TOKEN} para o token do CGI criado para sua conta.
+>Nota: altere a variável {SEU_TOKEN} para o token do CGI criado para sua conta.
 ```python
 import requests
 headers = {'Authorization': 'fesilveira23@gmail.com {SEU_TOKEN}'}
@@ -72,6 +72,18 @@ headers = {'Authorization': 'fesilveira23@gmail.com {SEU_TOKEN}'}
 r = requests.get('https://www.cancergenomeinterpreter.org/api/v1/%s' % job_id, headers=headers)
 r.json()
 ```
+output:
+```
+{'status': 'Done',
+ 'metadata': {'id': 'be1c1bc834503fb4e668',
+  'user': 'fesilveira23@gmail.com',
+  'title': 'Somatic MF WP048',
+  'cancertype': 'HEMATO',
+  'reference': 'hg38',
+  'dataset': 'input.tsv',
+  'date': '2025-12-06 14:12:41'}}
+```
+
 
 **Log completo do job ID**
 
@@ -82,11 +94,28 @@ import requests
 job_id ="be1c1bc834503fb4e668"
 
 headers = {'Authorization': 'fesilveira23@gmail.com {SEU_TOKEN}'}
-payload={'action':'download'}
+payload={'action':'logs'}
 r = requests.get('https://www.cancergenomeinterpreter.org/api/v1/%s' % job_id, headers=headers, params=payload)
-with open('/content/results/WP048/WP048-cgi.zip', 'wb') as fd:
-    fd.write(r._content)
+r.json()
 ```
+output:
+```
+{'status': 'Done',
+ 'logs': ['# cgi analyze input.tsv -c HEMATO -g hg38',
+  '2025-12-06 15:12:44,237 INFO     Parsing input01.tsv\n',
+  '2025-12-06 15:12:47,767 INFO     Running VEP\n',
+  '2025-12-06 15:12:48,748 INFO     Check cancer genes and consensus roles\n',
+  '2025-12-06 15:12:48,825 INFO     Annotate BoostDM mutations\n',
+  '2025-12-06 15:12:48,866 INFO     Annotate OncodriveMUT mutations\n',
+  '2025-12-06 15:12:50,985 INFO     Annotate validated oncogenic mutations\n',
+  '2025-12-06 15:12:51,123 INFO     Check oncogenic classification\n',
+  '2025-12-06 15:12:51,181 INFO     Matching biomarkers\n',
+  '2025-12-06 15:12:51,266 INFO     Prescription finished\n',
+  '2025-12-06 15:12:51,277 INFO     Aggregate metrics\n',
+  '2025-12-06 15:12:54,337 INFO     Compress output files\n',
+  '2025-12-06 15:12:54,377 INFO     Analysis done\n']}
+```
+
 
 **Download dos Resultados** 
 
