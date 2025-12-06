@@ -135,7 +135,7 @@ Total de 4 arquivos de resultados:
 mkdir -p results/WP048
 ```
 
-```
+```python
 import requests
 job_id ="be1c1bc834503fb4e668"
 
@@ -174,4 +174,3 @@ pd.read_csv('/content/results/WP048/alterations.tsv',sep='\t',index_col=False, e
 ```
 output:
 
-tabela 
