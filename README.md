@@ -172,4 +172,6 @@ Instalar a lib pandas
 import pandas as pd
 pd.read_csv('/content/results/WP048/alterations.tsv',sep='\t',index_col=False, engine= 'python')
 ```
+output:
 
+tabela 
