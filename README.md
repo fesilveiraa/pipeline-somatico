@@ -16,7 +16,7 @@ Receiving objects: 100% (226/226), 8.63 MiB | 26.63 MiB/s, done.
 Resolving deltas: 100% (106/106), done.
 ```
 
-Agora, vá até o github Imabrasil-hg38 na sessão Usando CGI via API Rest no Google Collab
+****2. Agora, vá até o github Imabrasil-hg38 na sessão Usando CGI via API Rest no Google Collab****
 
 ```bash
 # cortar pelas colunas de 1 a 4
@@ -25,13 +25,19 @@ Agora, vá até o github Imabrasil-hg38 na sessão Usando CGI via API Rest no Go
 #3: REF
 #4: ALT
 cut -f1-4 /content/lmabrasil-hg38/vep_output/liftOver_WP048_hg19ToHg38.vep.filter.tsv | sed -e "s/CHROM/CHR/g"  > df_WP048-cgi.txt
-```
 
-# listar as 10 primeiras linhas 
+# Listar as 10 primeiras linhas
 head df_WP048-cgi.txt
 ```
 
-**Enviar job para Cancer Genome Interpreter (CGI) API**
+output: 
+```
+CHR	POS	REF	ALT
+chr1	114716123	C	T
+chr9	5073770	G	T
+```
+
+**3. Enviar job para Cancer Genome Interpreter (CGI) API**
 > fonte: https://www.cancergenomeinterpreter.org/rest_api
 
 Após filtrar apenas as colunas de interesse (CHR, POS, REF e ALT), agora podemos enviar via REST-API as variantes somaticas da amostra WP048.
