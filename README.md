@@ -60,7 +60,7 @@ output:
 be1c1bc834503fb4e668
 ```
 
-**Status do job ID (Running, Error, Done)**
+**Status do JobID (Running, Error, Done)**
 
 Verifique o status do job ID para identificar se a análise terminou ou se houve um erro.
 
@@ -85,7 +85,7 @@ output:
 ```
 
 
-**Log completo do job ID**
+**Log completo do JobID**
 
 Aqui podemos verificar o status em cada uma das etapas da análise do CGI.
 
