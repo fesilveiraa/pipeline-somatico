@@ -62,7 +62,7 @@ output:
 be1c1bc834503fb4e668
 ```
 
-**Status do JobID (Running, Error, Done)**
+**4. Status do JobID (Running, Error, Done)**
 
 Verifique o status do job ID para identificar se a análise terminou ou se houve um erro.
 
@@ -87,7 +87,7 @@ output:
 ```
 
 
-**Log completo do JobID**
+**5. Log completo do JobID**
 
 Aqui podemos verificar o status em cada uma das etapas da análise do CGI.
 
@@ -119,7 +119,7 @@ output:
 ```
 
 
-**Download dos Resultados** 
+**6. Download dos Resultados .zip** 
 
 Total de 4 arquivos de resultados:
 
@@ -135,5 +135,41 @@ Total de 4 arquivos de resultados:
 mkdir -p results/WP048
 ```
 
+```
+import requests
+job_id ="be1c1bc834503fb4e668"
 
+headers = {'Authorization': 'fesilveira23@gmail.com {SEU_TOKEN}'}
+payload={'action':'download'}
+r = requests.get('https://www.cancergenomeinterpreter.org/api/v1/%s' % job_id, headers=headers, params=payload)
+with open('/content/results/WP048/WP048-cgi.zip', 'wb') as fd:
+    fd.write(r._content)
+```
+
+```bash
+%%bash
+!unzip /content/results/WP048/WP048-cgi.zip -d /content/results/WP048/
+```
+
+output: 
+```
+Archive:  /content/results/WP048/WP048-cgi.zip
+  inflating: /content/results/WP048/alterations.tsv  
+  inflating: /content/results/WP048/biomarkers.tsv  
+  inflating: /content/results/WP048/input01.tsv  
+  inflating: /content/results/WP048/summary.txt
+```
+
+**7. Visualizar a tabela alterations.tsv**
+
+Instalar a lib pandas
+
+```bash
+!pip install pandas
+```
+
+```
+import pandas as pd
+pd.read_csv('/content/results/WP048/alterations.tsv',sep='\t',index_col=False, engine= 'python')
+```
 
