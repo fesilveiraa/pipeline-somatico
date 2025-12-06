@@ -8,7 +8,8 @@ Pipeline somático - Do VCF (anotado) até o CGI Classificação
 !git clone https://github.com/renatopuga/lmabrasil-hg38.git
 ```
 output:
-```Cloning into 'lmabrasil-hg38'...
+```python
+Cloning into 'lmabrasil-hg38'...
 remote: Enumerating objects: 226, done.
 remote: Counting objects: 100% (168/168), done.
 remote: Compressing objects: 100% (108/108), done.
