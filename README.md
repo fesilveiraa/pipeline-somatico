@@ -4,6 +4,7 @@ Pipeline somático - Do VCF (anotado) até o CGI Classificação
 ****1. Clonar o git Imabrasil-hg38****
 
 ```bash
+%%bash
 !git clone https://github.com/renatopuga/lmabrasil-hg38.git
 ```
 output:
@@ -19,6 +20,7 @@ Resolving deltas: 100% (106/106), done.
 ****2. Agora, vá até o github Imabrasil-hg38 na sessão Usando CGI via API Rest no Google Collab****
 
 ```bash
+%%bash
 # cortar pelas colunas de 1 a 4
 #1: CHROM (converte CHROM para CHR) formato que o CGI gosta
 #2: POS
@@ -122,5 +124,16 @@ output:
 Total de 4 arquivos de resultados:
 
 > Definir cada um deles com base na documentação do CGI (todos)
-- alterations.tsv: ...
-- biomarkers.tsv: ...
+1. alterations.tsv: ...
+2. biomarkers.tsv: ...
+3. input01.tsv: ...
+4. summary.txt: ...
+
+```bash
+%%bash
+#Criar diretório com o ID da amostra dentro do results
+mkdir -p results/WP048
+```
+
+
+
