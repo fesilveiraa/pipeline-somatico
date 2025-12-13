@@ -179,3 +179,36 @@ output:
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 |0|input01\_1|1|114716123|C|T|chr1|114716123|snp|+|input01|NRAS|G13D|oncogenic \(predicted and annotated\)|driver \(boostDM: non-tissue-specific model\)|cgi,oncokb,clinvar:13901|chr1:114716123 C\>T|missense\_variant|ENST00000369535|+|SNV|
 |1|input01\_2|9|5073770|G|T|chr9|5073770|snp|+|input01|JAK2|V617F|oncogenic \(annotated\)|passenger \(oncodriveMUT\)|cgi,oncokb,clinvar:14662|chr9:5073770 G\>T|missense\_variant|ENST00000381652|+|SNV|
+
+
+
+**8. Tabela de variantes somaticas em cancer em diversas amostras.**
+> 
+> > WP017, WP019, WP058, WP068
+
+
+```python
+import pandas as pd
+import glob
+
+files = glob.glob("/content/results/*/alterations.tsv")
+
+print("Arquivos encontrados:")
+for f in files:
+    print(" -", f)
+
+dfs = []
+
+for path in files:
+    sample_id = path.split("/")[-2]
+    print(f"Lendo {sample_id} ...")
+    df = pd.read_csv(path, sep="\t")
+    df.insert(0, "input", sample_id)
+    dfs.append(df)
+
+df_final = pd.concat(dfs, ignore_index=True)
+
+print("Tabela final criada com sucesso!")
+df_final
+```
+
