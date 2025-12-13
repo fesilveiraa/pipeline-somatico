@@ -184,7 +184,7 @@ output:
 
 **8. Tabela de variantes somaticas em cancer em diversas amostras.**
 > 
-> > WP017, WP019, WP058, WP068
+> > Sendo elas: WP017, WP019, WP058, WP068
 
 
 ```python
