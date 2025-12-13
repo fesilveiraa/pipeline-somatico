@@ -125,10 +125,10 @@ output:
 Total de 4 arquivos de resultados:
 
 > Definir cada um deles com base na documentação do CGI (todos)
-1. alterations.tsv: ...
-2. biomarkers.tsv: ...
-3. input01.tsv: ...
-4. summary.txt: ...
+1. alterations.tsv: São todas as alterações genomicas encontradas nas amostras analisadas. 
+2. biomarkers.tsv: São biomarcadores relevantes que ocorreram a partir de alterações genomicas.
+3. input01.tsv: Arquivos que mostram as entradas fornecidas pelo usuário. 
+4. summary.txt: É um arquivo com um resumo geral da análises dos dados que obtivemos através do programa.
 
 ```bash
 %%bash
