@@ -212,3 +212,19 @@ print("Tabela final criada com sucesso!")
 df_final
 ```
 
+
+output: 
+| index |	input| Input | ID	| CHROMOSOME	| POSITION	| REF	| ALT	| CHR	| POS	| ALT_TYPE STRAND	CGI-Sample ID	CGI-Gene	CGI-Protein Change	CGI-Oncogenic Summary	CGI-Oncogenic Prediction	CGI-External oncogenic annotation	CGI-Mutation	CGI-Consequence	CGI-Transcript	CGI-STRAND
+|------:|-------|----------|------------|----------|-----|-----|------|----------------|-------------------|-------------|
+| 0 | WP019 | input01_1 | 1 | 16031913 | G | A | CLCNKA | -- | non-protein affecting | intron_variant |
+| 1 | WP019 | input01_2 | 1 | 149073703 | C | T | NBPF9 | -- | non-protein affecting | intron_variant |
+| 2 | WP019 | input01_3 | 17 | 76736877 | G | T | SRSF2 | P95H | oncogenic (predicted and annotated) | missense_variant |
+| 3 | WP019 | input01_6 | 2 | 113117932 | G | T | IL1RN | -- | non-protein affecting | 5_prime_UTR_variant |
+| 4 | WP019 | input01_7 | 4 | 2341569 | G | C | ZFYVE28 | P76R | non-oncogenic | missense_variant |
+| 7 | WP019 | input01_14 | 9 | 5073770 | G | T | JAK2 | V617F | oncogenic (annotated) | missense_variant |
+| 8 | WP048 | input01_1 | 1 | 114716123 | C | T | NRAS | G13D | oncogenic (predicted and annotated) | missense_variant |
+| 16 | WP068 | input01_9 | 4 | 54733155 | A | T | KIT | D816V | oncogenic (predicted and annotated) | missense_variant |
+| 24 | WP058 | input01_4 | 19 | 12943751 | indel | - | CALR | EQRLKEEEEDKKRKEEEE364-381X | oncogenic (predicted) | frameshift_variant |
+| 26 | WP058 | input01_6 | 20 | 32434638 | indel | G | ASXL1 | -642-643X | oncogenic (predicted) | frameshift_variant |
+| 35 | WP017 | input01_8 | 16 | 67616834 | G | A | CTCF | E348K | oncogenic (predicted) | missense_variant |
+| 45 | WP017 | input01_18 | 21 | 43094667 | T | G | U2AF1 | Q157P | oncogenic (predicted and annotated) | missense_variant |
