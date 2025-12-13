@@ -242,4 +242,8 @@ output:
 | 23 | WP058 | input01_3 | 15 | 43206304  | T | G | chr15 | 43206304  | snp   | + | input01 | AC068724.4 | -- | non-protein affecting | non-protein affecting | NaN | chr15:43206304 T>G | intron_variant     | ENST00000563128 | + |
 | 24 | WP058 | input01_4 | 19 | 12943751  | GCAGAGGCTTAAGGAGGAGGAAGAAGACAAGAAACGCAAAGAGGAGGAGGAG | - | chr19 | 12943750 | indel | + | input01 | CALR | EQRLKEEEEDKKRKEEEE364-381X | oncogenic (predicted) | driver (oncodriveMUT) | NaN | chr19:12943751-12943751 GCAGAGGCTTAAGGAGGAGGAAGAAGACAAGAAACGCAAAGAGGAGGAGGAG>- | frameshift_variant | ENST00000316448 | + |
 | 25 | WP058 | input01_5 | 2  | 105892889 | T | G | chr2  | 105892889 | snp   | + | input01 | NCK2 | --    | non-protein affecting      | non-protein affecting | NaN | chr2:105892889 T>G | intron_variant     | ENST00000233154 | + |
-
+26	WP058	input01_6	20	32434638	-	G	chr20	32434638	indel	+	input01	ASXL1	-642-643X	oncogenic (predicted)	driver (oncodriveMUT)	NaN	chr20:32434638-32434639 ->G	frameshift_variant	ENST00000375687	+
+27	WP058	input01_7	7	124892275	T	C	chr7	124892275	snp	+	input01	POT1	K39E	non-oncogenic	passenger (oncodriveMUT)	NaN	chr7:124892275 T>C	missense_variant	ENST00000357628	+
+28	WP017	input01_1	1	114716127	C	T	chr1	114716127	snp	+	input01	NRAS	G12S	oncogenic (predicted and annotated)	driver (boostDM: non-tissue-specific model)	cgi,clinvar:177778	chr1:114716127 C>T	missense_variant	ENST00000369535	+
+29	WP017	input01_2	1	152304661	G	C	chr1	152304661	snp	+	input01	FLG	R3409G	non-oncogenic	passenger (oncodriveMUT)	NaN	chr1:152304661 G>C	missense_variant	ENST00000368799	+
+30	WP017	input01_3	11	115209621	G	A	chr11	115209621	snp	+	input01	CADM1	T344I	non-oncogenic	passenger (oncodriveMUT)	NaN	chr11:115209621 G>A	missense_variant	ENST00000331581	+
