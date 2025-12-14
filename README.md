@@ -39,7 +39,7 @@ CHR	POS	REF	ALT
 chr1	114716123	C	T
 chr9	5073770	G	T
 ```
-
+---
 **3. Enviar job para Cancer Genome Interpreter (CGI) API**
 > fonte: https://www.cancergenomeinterpreter.org/rest_api
 
@@ -62,7 +62,7 @@ output:
 ```
 be1c1bc834503fb4e668
 ```
-
+---
 **4. Status do JobID (Running, Error, Done)**
 
 Verifique o status do job ID para identificar se a análise terminou ou se houve um erro.
@@ -87,7 +87,7 @@ output:
   'date': '2025-12-06 14:12:41'}}
 ```
 
-
+---
 **5. Log completo do JobID**
 
 Aqui podemos verificar o status em cada uma das etapas da análise do CGI.
@@ -119,7 +119,7 @@ output:
   '2025-12-06 15:12:54,377 INFO     Analysis done\n']}
 ```
 
-
+---
 **6. Download dos Resultados *.zip*** 
 
 Total de 4 arquivos de resultados:
@@ -160,7 +160,7 @@ Archive:  /content/results/WP048/WP048-cgi.zip
   inflating: /content/results/WP048/input01.tsv  
   inflating: /content/results/WP048/summary.txt
 ```
-
+---
 **7. Visualizar a tabela alterations.tsv**
 
 Instalar a lib pandas
@@ -180,8 +180,7 @@ output:
 |0|input01\_1|1|114716123|C|T|chr1|114716123|snp|+|input01|NRAS|G13D|oncogenic \(predicted and annotated\)|driver \(boostDM: non-tissue-specific model\)|cgi,oncokb,clinvar:13901|chr1:114716123 C\>T|missense\_variant|ENST00000369535|+|SNV|
 |1|input01\_2|9|5073770|G|T|chr9|5073770|snp|+|input01|JAK2|V617F|oncogenic \(annotated\)|passenger \(oncodriveMUT\)|cgi,oncokb,clinvar:14662|chr9:5073770 G\>T|missense\_variant|ENST00000381652|+|SNV|
 
-
-
+---
 **8. Tabela de variantes somaticas em cancer em diversas amostras.**
 > Se o pandas já tiver sido instalado no processamento de uma das amostras, não há necessidade de instalar novamente contanto que não saia da página e o servidor não desconecte
 > > Sendo elas: WP017, WP019, WP058, WP068
