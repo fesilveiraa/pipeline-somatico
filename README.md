@@ -1,7 +1,7 @@
 # Pipeline-Somático
 Pipeline somático - Do VCF (anotado) até o CGI Classificação
->Essa primeira parte será feita para a amostra WP048
 
+## Amostra WP048 ##
 ****1. Clonar o git Imabrasil-hg38****
 
 ```bash
