@@ -120,7 +120,7 @@ output:
 ```
 
 
-**6. Download dos Resultados .zip** 
+**6. Download dos Resultados *.zip*** 
 
 Total de 4 arquivos de resultados:
 
