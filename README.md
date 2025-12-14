@@ -1,5 +1,6 @@
 # Pipeline-Somático
 Pipeline somático - Do VCF (anotado) até o CGI Classificação
+>Essa primeira parte será feita para a amostra WP048
 
 ****1. Clonar o git Imabrasil-hg38****
 
@@ -147,6 +148,8 @@ with open('/content/results/WP048/WP048-cgi.zip', 'wb') as fd:
     fd.write(r._content)
 ```
 
+**7. Descompactar o zip com os resultados**
+
 ```bash
 %%bash
 !unzip /content/results/WP048/WP048-cgi.zip -d /content/results/WP048/
@@ -161,13 +164,14 @@ Archive:  /content/results/WP048/WP048-cgi.zip
   inflating: /content/results/WP048/summary.txt
 ```
 ---
-**7. Visualizar a tabela alterations.tsv**
+**8. Visualizar a tabela alterations.tsv**
 
-Instalar a lib pandas
+Instalar a lib pandas 
 
 ```bash
 !pip install pandas
 ```
+Para imprimir a tabela com alterações:
 
 ```python
 import pandas as pd
@@ -181,7 +185,7 @@ output:
 |1|input01\_2|9|5073770|G|T|chr9|5073770|snp|+|input01|JAK2|V617F|oncogenic \(annotated\)|passenger \(oncodriveMUT\)|cgi,oncokb,clinvar:14662|chr9:5073770 G\>T|missense\_variant|ENST00000381652|+|SNV|
 
 ---
-**8. Tabela de variantes somaticas em cancer em diversas amostras.**
+**9. Tabela de variantes somaticas em cancer em diversas amostras.**
 > Se o pandas já tiver sido instalado no processamento de uma das amostras, não há necessidade de instalar novamente contanto que não saia da página e o servidor não desconecte
 > > Sendo elas: WP017, WP019, WP058, WP068
 
