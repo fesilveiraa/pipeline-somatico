@@ -1,4 +1,4 @@
-# pipeline-somatico
+# Pipeline-Somático
 Pipeline somático - Do VCF (anotado) até o CGI Classificação
 
 ****1. Clonar o git Imabrasil-hg38****
@@ -17,7 +17,7 @@ remote: Total 226 (delta 90), reused 114 (delta 56), pack-reused 58 (from 1)
 Receiving objects: 100% (226/226), 8.63 MiB | 26.63 MiB/s, done.
 Resolving deltas: 100% (106/106), done.
 ```
-
+---
 ****2. Agora, vá até o github Imabrasil-hg38 na sessão Usando CGI via API Rest no Google Collab****
 
 ```bash
