@@ -202,27 +202,32 @@ output:
 
 ```python
 import pandas as pd
-import glob
 
-files = glob.glob("/content/results/*/alterations.tsv")
+wp048 = pd.read_csv('/content/results/WP048/alterations.tsv', sep='\t')
+wp017 = pd.read_csv('/content/results/WP017/alterations.tsv', sep='\t')
+wp019 = pd.read_csv('/content/results/WP019/alterations.tsv', sep='\t')
+wp058 = pd.read_csv('/content/results/WP058/alterations.tsv', sep='\t')
+wp068 = pd.read_csv('/content/results/WP068/alterations.tsv', sep='\t')
 
-print("Arquivos encontrados:")
-for f in files:
-    print(" -", f)
 
-dfs = []
+wp048["Sample"] = "WP048"
+wp017["Sample"] = "WP017"
+wp019["Sample"] = "WP019"
+wp058["Sample"] = "WP058"
+wp068["Sample"] = "WP068"
 
-for path in files:
-    sample_id = path.split("/")[-2]
-    print(f"Lendo {sample_id} ...")
-    df = pd.read_csv(path, sep="\t")
-    df.insert(0, "input", sample_id)
-    dfs.append(df)
+tabela_final = pd.concat([wp048, wp017, wp019, wp058, wp068], ignore_index=True)
 
-df_final = pd.concat(dfs, ignore_index=True)
+tabela_final.head()
 
-print("Tabela final criada com sucesso!")
-df_final
+tabela_final.to_csv("tabela_final_CGI.tsv", sep="\t", index=False)
+
+cols = ["Sample"] + [c for c in tabela_final.columns if c != "Sample"]
+tabela_final = tabela_final[cols]
+
+from IPython.display import display
+
+display(tabela_final)
 ```
 
 
