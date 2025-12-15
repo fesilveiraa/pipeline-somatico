@@ -186,17 +186,59 @@ output:
 
 ---
 ## Amostra WP017 ##
-> Para essas outras amostras vamos fazer os mesmo passos que já foi ensinado então passarei por eles mais rápido.
+> Para essas outras amostras vamos fazer os mesmo passos que já foram ensinado então passarei por eles mais rápido.
+
+```bash
+#Amostra WP017
+
+%%bash
+cut -f1-4 /content/lmabrasil-hg38/vep_output/liftOver_WP017_hg19ToHg38.vep.filter.tsv | sed -e "s/CHROM/CHR/g"  > df_WP017-cgi.txt
+head df_WP017-cgi.txt
+
+
+--
+output:
+```
+CHR	POS	REF	ALT
+chr1	114716127	C	T
+chr1	152304661	G	C
+chr11	115209621	G	A
+chr12	132140028	C	T
+chr14	24119817	G	A
+chr14	59727407	G	A
+chr15	24675943	G	A
+chr16	67616834	G	A
+chr16	71389851	G	A
+```
+`por
+import requestseaders = {'Authorization': 'fesilveira23@gmail.com 6afc6476a79e635b1238'}
+payload = {'cancer_type': 'HEMATO', 'title': 'Somatic MF WP017', 'reference': 'hg38'}
+r = requests.post('https://www.cancergenomeinterpreter.org/api/v1',
+                headers=headers,
+                files={
+                        'mutations': open('/content/df_WP017-cgi.txt', 'rb')
+                        },
+                data=payload)
+r.json()
+''```
+
+output:
+```
+fefe3824b46d28c32476
+``
 
 
 
+
+## Amostra WP019 Para essas outras amostras vamos fazer os mesmo passos que já foram ensinado então passarei por eles mais rápido.
 ---
-## Amostra WP019 ##
----
-## Amostra WP058 ##
+## Am
+
+ostra WP058 ##
+> Para essas outras amostras vamos fazer os mesmo passos que já foram ensinado então passarei por eles mais rápido.
 ---
 ## Amostra WP068 ##
-
+> Para essas outras amostras vamos fazer os mesmo passos que já foram ensinado então passarei por eles mais rápido.
 ---
 
 **9. Tabela de variantes somaticas em cancer em diversas amostras.**
