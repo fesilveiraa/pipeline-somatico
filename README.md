@@ -147,7 +147,7 @@ r = requests.get('https://www.cancergenomeinterpreter.org/api/v1/%s' % job_id, h
 with open('/content/results/WP048/WP048-cgi.zip', 'wb') as fd:
     fd.write(r._content)
 ```
-
+---
 **7. Descompactar o zip com os resultados**
 
 ```bash
