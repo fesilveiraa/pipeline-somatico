@@ -186,7 +186,7 @@ output:
 
 ---
 # Próximas amostras #
-> As proximas amostras são:WP017, WP019, WP058, WP068
+> As proximas amostras são: WP017, WP019, WP058, WP068
 > >Como os passos para estas amostras são os mesmo que acima mas apenas mudando o número da amostra, deixarei o link do Collab em que foi feito o código para caso precise de mais informações sobre cada amostra específica. Aqui estarei pulando direto para a tabela final com todas as amostras.
 > >> https://colab.research.google.com/drive/1G4q2b0TIiaoXRC0MyEoLntu4ol3DAzDq?usp=sharing
 
