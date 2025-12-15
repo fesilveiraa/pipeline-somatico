@@ -186,6 +186,10 @@ output:
 
 ---
 ## Amostra WP017 ##
+> Para essas outras amostras vamos fazer os mesmo passos que já foi ensinado então passarei por eles mais rápido.
+
+
+
 ---
 ## Amostra WP019 ##
 ---
@@ -197,37 +201,52 @@ output:
 
 **9. Tabela de variantes somaticas em cancer em diversas amostras.**
 > Se o pandas já tiver sido instalado no processamento de uma das amostras, não há necessidade de instalar novamente contanto que não saia da página e o servidor não desconecte
-> > Sendo elas: WP017, WP019, WP058, WP068
-
+>> Sendo elas: WP017, WP019, WP058, WP068
+>>> O código abaixo foi feito com a ajuda do ChatGPT
 
 ```python
+# Importa a biblioteca pandas, usada para manipulação de tabelas (DataFrames)
 import pandas as pd
 
+# Lê os arquivos alterations.tsv de cada amostra
+# sep='\t' indica que o arquivo é separado por TAB (formato TSV)
 wp048 = pd.read_csv('/content/results/WP048/alterations.tsv', sep='\t')
 wp017 = pd.read_csv('/content/results/WP017/alterations.tsv', sep='\t')
 wp019 = pd.read_csv('/content/results/WP019/alterations.tsv', sep='\t')
 wp058 = pd.read_csv('/content/results/WP058/alterations.tsv', sep='\t')
 wp068 = pd.read_csv('/content/results/WP068/alterations.tsv', sep='\t')
 
-
+# Cria uma nova coluna chamada "Sample" em cada DataFrame
+# Essa coluna identifica de qual amostra os dados se originam
 wp048["Sample"] = "WP048"
 wp017["Sample"] = "WP017"
 wp019["Sample"] = "WP019"
 wp058["Sample"] = "WP058"
 wp068["Sample"] = "WP068"
 
+# Concatena (empilha) todas as tabelas em uma única tabela final
+# ignore_index=True redefine o índice para evitar índices duplicados
 tabela_final = pd.concat([wp048, wp017, wp019, wp058, wp068], ignore_index=True)
 
+# Mostra as primeiras 5 linhas da tabela para conferência rápida
 tabela_final.head()
 
+# Salva a tabela final em um arquivo TSV
+# sep='\t' mantém o padrão de arquivos do CGI
+# index=False evita salvar a coluna de índice no arquivo
 tabela_final.to_csv("tabela_final_CGI.tsv", sep="\t", index=False)
 
+# Reorganiza as colunas para que "Sample" seja a primeira coluna
+# Cria uma lista onde "Sample" vem primeiro e as demais colunas vêm depois
 cols = ["Sample"] + [c for c in tabela_final.columns if c != "Sample"]
 tabela_final = tabela_final[cols]
 
+# Importa a função display para mostrar tabelas de forma formatada no Colab
 from IPython.display import display
 
+# Exibe a tabela final completa no Colab
 display(tabela_final)
+
 ```
 
 
