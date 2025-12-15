@@ -185,60 +185,19 @@ output:
 |1|input01\_2|9|5073770|G|T|chr9|5073770|snp|+|input01|JAK2|V617F|oncogenic \(annotated\)|passenger \(oncodriveMUT\)|cgi,oncokb,clinvar:14662|chr9:5073770 G\>T|missense\_variant|ENST00000381652|+|SNV|
 
 ---
+# Próximas amostras #
+> Como os passos para estas amostras são os mesmo que acima mas apenas mudando o número da amostra, irei apenas mostrar o resultado da tabela final de cada uma delas. 
+> Aqui deixarei o link do Collab em que foi feito o código para caso precise de mais informações sobre cada amostra específica.
+> > https://colab.research.google.com/drive/1G4q2b0TIiaoXRC0MyEoLntu4ol3DAzDq?usp=sharing
+---
 ## Amostra WP017 ##
-> Para essas outras amostras vamos fazer os mesmo passos que já foram ensinado então passarei por eles mais rápido.
-
-```bash
-#Amostra WP017
-
-%%bash
-cut -f1-4 /content/lmabrasil-hg38/vep_output/liftOver_WP017_hg19ToHg38.vep.filter.tsv | sed -e "s/CHROM/CHR/g"  > df_WP017-cgi.txt
-head df_WP017-cgi.txt
-
-
+---
+## Amostra WP019 ##
+---
+### Amostra WP058 ##
 --
-output:
-```
-CHR	POS	REF	ALT
-chr1	114716127	C	T
-chr1	152304661	G	C
-chr11	115209621	G	A
-chr12	132140028	C	T
-chr14	24119817	G	A
-chr14	59727407	G	A
-chr15	24675943	G	A
-chr16	67616834	G	A
-chr16	71389851	G	A
-```
-```
-import requests
-readers = {'Authorization': 'fesilveira23@gmail.com 6afc6476a79e635b123ayload = {'cancer_type': 'HEMATO', 'title': 'Somatic MF WP017', 'reference': 'hg38'}
-r = requests.post('https://www.cancergenomeinterpreter.org/api/v1',
-                headers=headers,
-                files={
-                        'mutations': open('/content/df_WP017-cgi.txt', 'rb')
-                        },
-                data=payload)
-r.json()
-```
-output:
-```
-fefe3824b46d28c32476
-``
-
-
-
-
-## Amostra WP019 Para essas outras amostras vamos fazer os mesmo passos que já foram ensinado então passarei por eles mais rápido.
----
-## Amostra WP058 ##
-> Para essas outras amostras vamos fazer os mesmo passos que já foram ensinado então passarei por eles mais rápido.
----
-## Amostra WP068 ##
-> Para essas outras amostras vamos fazer os mesmo passos que já foram ensinado então passarei por eles mais rápido.
----
-
-**9. Tabela de variantes somaticas em cancer em diversas amostras.**
+### Amostra WP068## 
+---**9. Tabela de variantes somaticas em cancer em diversas amostras.**
 > Se o pandas já tiver sido instalado no processamento de uma das amostras, não há necessidade de instalar novamente contanto que não saia da página e o servidor não desconecte
 >> Sendo elas: WP017, WP019, WP058, WP068
 >>> O código abaixo foi feito com a ajuda do ChatGPT
