@@ -186,17 +186,10 @@ output:
 
 ---
 # Próximas amostras #
-> Como os passos para estas amostras são os mesmo que acima mas apenas mudando o número da amostra, irei apenas mostrar o resultado da tabela final de cada uma delas. 
-> Aqui deixarei o link do Collab em que foi feito o código para caso precise de mais informações sobre cada amostra específica.
-> > https://colab.research.google.com/drive/1G4q2b0TIiaoXRC0MyEoLntu4ol3DAzDq?usp=sharing
----
-## Amostra WP017 ##
----
-## Amostra WP019 ##
----
-## Amostra WP058 ##
----
-## Amostra WP068 ##
+> As proximas amostras são:WP017, WP019, WP058, WP068
+> >Como os passos para estas amostras são os mesmo que acima mas apenas mudando o número da amostra, deixarei o link do Collab em que foi feito o código para caso precise de mais informações sobre cada amostra específica. Aqui estarei pulando direto para a tabela final com todas as amostras.
+> >> https://colab.research.google.com/drive/1G4q2b0TIiaoXRC0MyEoLntu4ol3DAzDq?usp=sharing
+
 ---
 **9. Tabela de variantes somaticas em cancer em diversas amostras.**
 > Se o pandas já tiver sido instalado no processamento de uma das amostras, não há necessidade de instalar novamente contanto que não saia da página e o servidor não desconecte
