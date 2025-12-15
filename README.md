@@ -210,9 +210,9 @@ chr15	24675943	G	A
 chr16	67616834	G	A
 chr16	71389851	G	A
 ```
-`por
-import requestseaders = {'Authorization': 'fesilveira23@gmail.com 6afc6476a79e635b1238'}
-payload = {'cancer_type': 'HEMATO', 'title': 'Somatic MF WP017', 'reference': 'hg38'}
+```
+import requests
+readers = {'Authorization': 'fesilveira23@gmail.com 6afc6476a79e635b123ayload = {'cancer_type': 'HEMATO', 'title': 'Somatic MF WP017', 'reference': 'hg38'}
 r = requests.post('https://www.cancergenomeinterpreter.org/api/v1',
                 headers=headers,
                 files={
@@ -220,8 +220,7 @@ r = requests.post('https://www.cancergenomeinterpreter.org/api/v1',
                         },
                 data=payload)
 r.json()
-''```
-
+```
 output:
 ```
 fefe3824b46d28c32476
@@ -232,9 +231,7 @@ fefe3824b46d28c32476
 
 ## Amostra WP019 Para essas outras amostras vamos fazer os mesmo passos que já foram ensinado então passarei por eles mais rápido.
 ---
-## Am
-
-ostra WP058 ##
+## Amostra WP058 ##
 > Para essas outras amostras vamos fazer os mesmo passos que já foram ensinado então passarei por eles mais rápido.
 ---
 ## Amostra WP068 ##
