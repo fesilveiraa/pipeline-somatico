@@ -194,10 +194,11 @@ output:
 ---
 ## Amostra WP019 ##
 ---
-### Amostra WP058 ##
---
-### Amostra WP068## 
----**9. Tabela de variantes somaticas em cancer em diversas amostras.**
+## Amostra WP058 ##
+---
+## Amostra WP068## 
+---
+**9. Tabela de variantes somaticas em cancer em diversas amostras.**
 > Se o pandas já tiver sido instalado no processamento de uma das amostras, não há necessidade de instalar novamente contanto que não saia da página e o servidor não desconecte
 >> Sendo elas: WP017, WP019, WP058, WP068
 >>> O código abaixo foi feito com a ajuda do ChatGPT
